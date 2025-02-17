@@ -1,0 +1,19 @@
+<div>
+  <form [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)">
+    <input class="input-box" type="text" name="userName" placeholder="Enter Username" formControlName="userName">
+    
+    <input class="input-box" type="email" name="email" placeholder="Enter Email" formControlName="email">
+    
+    <input class="input-box" type="password" name="password" placeholder="Enter Password" formControlName="password">
+    
+    <input class="input-box" type="password" name="confirmPassword" placeholder="Confirm Password" formControlName="confirmPassword">
+    
+    <input class="btn" type="submit" value="Click here">
+  </form>
+</div>
+<p *ngIf="submitted">You have entered {{ userName }} as your Username<br>
+  You have entered {{ email }} as your Email<br>
+  You have entered {{ password }} as your Password<br>
+  You have entered {{ confirmPassword }} as your Confirm Password
+</p>
+<router-outlet />
